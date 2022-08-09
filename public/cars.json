@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "TOYOTA AXIO",
+        "price": "1000000",
+        "qty": "30",
+        "suppliername": "TOYOTA",
+        "description": "An extended car warranty should bring you peace of mind  predictable prices, a helpline when your car breaks down, and hassle-free visits to auto repair shops. But not all extended warranty companies are created equal, and only the most reputable extended car warranty companies are worth your time and money.",
+        "img": "https://i.ibb.co/grqrsbp/car1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "LANCER EX",
+        "price": "1500000",
+        "qty": "10",
+        "suppliername": "MITSUBISHI",
+        "description": "You can find customer review scores for warranty companies on Trustpilot, Google, and the Better Business Bureau (BBB) website, just to name a few. No one website is going to give you the full picture, so it is best to read reviews across multiple sites. For example, we noticed that customer review scores tend to be lower on the BBB because customers go to this site looking to resolve an issue.",
+        "img": "https://i.ibb.co/zQFYMdy/car2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "RANGE ROVER",
+        "price": "20000",
+        "qty": "50",
+        "suppliername": "LAND ROVER",
+        "description": "A companys BBB rating reflects how well it handles customer complaints. A low rating indicates that a company is responsive and effective in resolving issues. If a company has a low rating it means they havent done a good job of dealing with complaints. The BBB offers an explanation of a companys rating if you click the text “reasons for rating” under the grade.",
+        "img": "https://i.ibb.co/d0wptwp/car3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "AUDI R8",
+        "price": "2500000",
+        "qty": "25",
+        "suppliername": "AUDI",
+        "description": "Claims denials are one of the most common issues in the warranty industry. While reputable extended car warranty companies make it clear what is and isn t covered, others hide key details in the fine print of your contract, such as part specifications and the length of your waiting period.",
+        "img": "https://i.ibb.co/x3VMNpS/car4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "BMW I8",
+        "price": "30000000",
+        "qty": "80",
+        "suppliername": "BMW",
+        "description": "Endurance stands out from the competition as a direct supplier. When you purchase an extended auto warranty through Endurance, it is the only company you’ll deal with. While other providers may outsource their service teams or underwriting, Endurance administers its warranty to drivers directly. This means there are no middlemen in your claims process or other customer service interactions.",
+        "img": "https://i.ibb.co/6ZrfG2t/car5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "HONDA CIVIC",
+        "price": "35000000",
+        "qty": "35",
+        "suppliername": "HONDA",
+        "description": "WeatherTech liners are famous for their “channels” that carry fluids and debris to a lower reservoir to keep it away from your shoes. Aside from the occasional spill, the most common fluid will be water from melting snow. This is one significant advantage WeatherTech has over a standard rubber floor mat. Although nicer than the average cloth mat, water can still “pool” on a rubber mat. During the winter, that pool of water will also likely include salt and dirt, which usually soaks into your shoes and pants while you are driving.",
+        "img": "https://i.ibb.co/m83HyHt/car6.jpg"
+    }
+]
