@@ -6,6 +6,9 @@ import { Routes, Route } from "react-router-dom";
 import CarEntry from "./Components/Pages/CarEntry/CarEntry";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -13,10 +16,18 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/carentry/:id" element={<CarEntry></CarEntry>}></Route>
+        <Route
+          path="/carentry/:id"
+          element={
+            <RequireAuth>
+              <CarEntry></CarEntry>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Register></Register>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

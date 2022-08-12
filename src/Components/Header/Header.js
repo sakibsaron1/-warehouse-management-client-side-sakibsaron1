@@ -1,6 +1,21 @@
+import { signOut } from "firebase/auth";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const handlelogin = () => {
+    navigate("/login");
+  };
+
+  const logout = () => {
+    signOut(auth);
+    navigate("/login");
+  };
+
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="cursor-pointer flex items-center flex-shrink-0 text-white mr-6">
@@ -42,12 +57,22 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <a
-            href="#"
-            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >
-            Download
-          </a>
+          {user ? (
+            <button
+              onClick={logout}
+              className="cursor-pointer inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+            >
+              Log Out
+            </button>
+          ) : (
+            <button
+              onClick={handlelogin}
+              to="/login"
+              className="cursor-pointer inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+            >
+              Login
+            </button>
+          )}
         </div>
       </div>
     </nav>
