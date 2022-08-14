@@ -49,14 +49,34 @@ const Header = () => {
           >
             Login
           </Link>
-          <Link
-            to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Add / Remove Items
-          </Link>
+
+          {user && (
+            <Link
+              to="/manageitems"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              Manage Items
+            </Link>
+          )}
+          {user && (
+            <Link
+              to="/additem"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              Add Items
+            </Link>
+          )}
+          {user && (
+            <Link
+              to="/myitem"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              My Items
+            </Link>
+          )}
         </div>
         <div>
+          <h2>{user.displayName}</h2>
           {user ? (
             <button
               onClick={logout}
