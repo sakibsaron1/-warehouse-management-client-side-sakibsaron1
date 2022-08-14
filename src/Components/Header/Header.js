@@ -76,7 +76,7 @@ const Header = () => {
           )}
         </div>
         <div>
-          <h2>{user.displayName}</h2>
+          <h2 className="text-white">{user?.email}</h2>
           {user ? (
             <button
               onClick={logout}

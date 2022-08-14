@@ -11,9 +11,9 @@ const Cars = () => {
 
   return (
     <div className="my-10">
-      <h2 className="font-bold text-4xl">Our Latest Cars {cars.length}</h2>
+      <h2 className="font-bold text-4xl">Our Latest Cars</h2>
       <div className="cars-container grid gap-4 grid-cols-3 mx-4 my-6">
-        {cars.map((car) => (
+        {cars.slice(0, 6).map((car) => (
           <Car key={car.id} car={car}></Car>
         ))}
       </div>
