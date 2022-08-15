@@ -36,7 +36,12 @@ const ManageItems = () => {
         </thead>
         <tbody>
           {cars.map((car) => (
-            <ManageTable key={car.id} car={car}></ManageTable>
+            <ManageTable
+              key={car.id}
+              car={car}
+              cars={cars}
+              setCars={setCars}
+            ></ManageTable>
           ))}
         </tbody>
       </table>

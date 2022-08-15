@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "flowbite-react";
 import { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const MyTable = ({ car, cars, setCars }) => {
   const [open, setOpen] = useState(false);
@@ -33,6 +33,7 @@ const MyTable = ({ car, cars, setCars }) => {
         <img src={img} alt="" className="h-10 w-10" />
       </td>
       <td className="py-4 px-6 text-right">
+        
         <Button
           onClick={() => setOpen(true)}
           data-modal-toggle="popup-modal"
