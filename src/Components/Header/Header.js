@@ -7,6 +7,8 @@ const Header = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
+  console.log(user);
+
   const handlelogin = () => {
     navigate("/login");
   };
@@ -43,12 +45,15 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
-            to="/login"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Login
-          </Link>
+
+          {!user && (
+            <Link
+              to="/login"
+              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              Login
+            </Link>
+          )}
 
           {user && (
             <Link

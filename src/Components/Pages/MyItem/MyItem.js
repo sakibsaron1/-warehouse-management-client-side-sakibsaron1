@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 import MyTable from "./MyTable/MyTable";
 
 const MyItem = () => {
   const [cars, setCars] = useState([]);
+  const [user] = useAuthState(auth);
+
   useEffect(() => {
-    fetch("http://localhost:5000/carcollection")
+    fetch(`http://localhost:5000/myitems/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setCars(data));
-  }, []);
+  }, [user?.email]);
+
+  // const [items, setItems] = useState([]);
+
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/myitems/${email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setItems(data));
+  // }, []);
 
   return (
     <div className="overflow-x-auto relative shadow-md sm:rounded-lg mx-2">
@@ -36,7 +48,12 @@ const MyItem = () => {
         </thead>
         <tbody>
           {cars.map((car) => (
-            <MyTable key={car.id} car={car}></MyTable>
+            <MyTable
+              key={car.id}
+              car={car}
+              cars={cars}
+              setCars={setCars}
+            ></MyTable>
           ))}
         </tbody>
       </table>
