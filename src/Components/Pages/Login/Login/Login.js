@@ -84,6 +84,7 @@ const Login = () => {
               ref={usePassword}
             />
           </div>
+          {error && <p className="mb-3 text-red-500">{error.message}</p>}
           <div className="flex items-start mb-6">
             <div className="flex items-center h-5">
               <input

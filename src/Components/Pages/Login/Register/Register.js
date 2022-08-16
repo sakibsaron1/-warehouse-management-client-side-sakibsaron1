@@ -25,6 +25,7 @@ const Register = () => {
 
   if (user) {
     navigate(from);
+    toast("Successfully Login");
   }
 
   const handleEmail = (event) => {
@@ -46,8 +47,11 @@ const Register = () => {
       toast("2 Password Not Match");
       return;
     }
+    if (password.length < 6) {
+      toast("Password must be 6 characters or longer");
+      return;
+    }
     createUserWithEmailAndPassword(email, password);
-    toast("Successfully Login");
   };
 
   return (
