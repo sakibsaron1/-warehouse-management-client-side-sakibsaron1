@@ -4,11 +4,11 @@ import Car from "../../Car/Car";
 const Cars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/carcollection")
+    fetch("https://warehouse-management-s2rp.onrender.com/carcollection")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
-
+  console.log("car collcec ", cars);
   return (
     <div className="my-10">
       <h2 className="font-bold text-4xl">Our Latest Cars</h2>

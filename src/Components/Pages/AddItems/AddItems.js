@@ -25,7 +25,7 @@ const AddItems = () => {
       img,
     };
 
-    fetch("http://localhost:5000/additems", {
+    fetch("https://warehouse-management-s2rp.onrender.com/additems", {
       method: "POST",
       headers: {
         "content-type": "application/json",

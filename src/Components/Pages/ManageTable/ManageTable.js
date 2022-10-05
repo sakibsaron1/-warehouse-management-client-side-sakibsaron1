@@ -6,7 +6,7 @@ const ManageTable = ({ car, cars, setCars }) => {
   const [open, setOpen] = useState(false);
 
   const handledelete = (id) => {
-    fetch(`http://localhost:5000/deleteItem/${id}`, {
+    fetch(`https://warehouse-management-s2rp.onrender.com/deleteItem/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

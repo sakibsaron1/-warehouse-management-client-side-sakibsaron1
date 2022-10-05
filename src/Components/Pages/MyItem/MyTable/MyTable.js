@@ -8,7 +8,7 @@ const MyTable = ({ car, cars, setCars }) => {
   const { _id, name, price, qty, suppliername, img } = car;
 
   const handledelete = (id) => {
-    fetch(`http://localhost:5000/deleteItem/${id}`, {
+    fetch(`https://warehouse-management-s2rp.onrender.com/deleteItem/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -33,7 +33,6 @@ const MyTable = ({ car, cars, setCars }) => {
         <img src={img} alt="" className="h-10 w-10" />
       </td>
       <td className="py-4 px-6 text-right">
-        
         <Button
           onClick={() => setOpen(true)}
           data-modal-toggle="popup-modal"

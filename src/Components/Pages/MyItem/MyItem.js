@@ -8,7 +8,9 @@ const MyItem = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myitems/${user?.email}`)
+    fetch(
+      `https://warehouse-management-s2rp.onrender.com/myitems/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, [user?.email]);
@@ -16,7 +18,7 @@ const MyItem = () => {
   // const [items, setItems] = useState([]);
 
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/myitems/${email}`)
+  //   fetch(`https://warehouse-management-s2rp.onrender.com/myitems/${email}`)
   //     .then((res) => res.json())
   //     .then((data) => setItems(data));
   // }, []);

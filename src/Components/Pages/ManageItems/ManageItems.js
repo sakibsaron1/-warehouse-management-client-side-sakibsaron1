@@ -4,7 +4,7 @@ import ManageTable from "../ManageTable/ManageTable";
 const ManageItems = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/carcollection")
+    fetch("https://warehouse-management-s2rp.onrender.com/carcollection")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

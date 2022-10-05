@@ -10,7 +10,7 @@ const CarEntry = () => {
   // console.log(typeof carsQty, carsQty, cars.qty);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/thecar/${id}`)
+    fetch(`https://warehouse-management-s2rp.onrender.com/thecar/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCars(data);
@@ -32,7 +32,7 @@ const CarEntry = () => {
 
     // const totalQty = parseInt(carsQty);
 
-    fetch(`http://localhost:5000/quantity/${id}`, {
+    fetch(`https://warehouse-management-s2rp.onrender.com/quantity/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const CarEntry = () => {
     const totalqty = parseInt(carsQty) + parseInt(add);
     setCarsQty(totalqty);
 
-    fetch(`http://localhost:5000/quantity/${id}`, {
+    fetch(`https://warehouse-management-s2rp.onrender.com/quantity/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
